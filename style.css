@@ -233,3 +233,259 @@ dialog[open]{display:grid;place-items:center}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
 }
+/* =========================================
+   CORECȚII FINALE PENTRU PREZENTAREA PE IPAD
+   ========================================= */
+
+/* Ordinea culorilor: alb - negru - alb */
+#reels {
+  background: var(--cream) !important;
+  color: var(--ink) !important;
+}
+
+#reels .section-intro p {
+  color: var(--muted) !important;
+}
+
+#design {
+  background: var(--black) !important;
+  color: var(--white) !important;
+}
+
+#design .section-intro p {
+  color: #c8c1b9 !important;
+}
+
+#oferta {
+  background: var(--cream) !important;
+  color: var(--ink) !important;
+}
+
+
+/* Spațiu egal în stânga și în dreapta */
+#reels,
+#design,
+#oferta {
+  padding-left: clamp(28px, 5vw, 55px) !important;
+  padding-right: clamp(28px, 5vw, 55px) !important;
+}
+
+
+/* Cele 5 Reels să încapă complet pe iPad */
+.phones {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: clamp(12px, 2vw, 22px) !important;
+  width: min(100%, 900px) !important;
+  margin: 0 auto !important;
+  align-items: start !important;
+}
+
+.phone {
+  width: 100% !important;
+  max-width: 150px !important;
+  aspect-ratio: 9 / 19.5 !important;
+  justify-self: center !important;
+  border-radius: 25px !important;
+}
+
+.phone img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+
+/* Titlul și descrierea Reels */
+#reels .section-intro {
+  max-width: 900px !important;
+  margin: 0 auto 30px !important;
+}
+
+#reels .section-intro h2 {
+  color: var(--ink) !important;
+}
+
+
+/* Secțiunea Design să fie mai aerisită */
+#design .social-grid {
+  width: min(100%, 1050px) !important;
+  margin: 0 auto !important;
+  gap: 16px !important;
+}
+
+
+/* Oferta veterinară */
+.vet-section {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1.6fr) !important;
+  gap: 45px !important;
+  align-items: center !important;
+  padding-top: 65px !important;
+  padding-bottom: 55px !important;
+}
+
+.vet-copy p {
+  color: #68615a !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+.vet-copy li {
+  color: #2b2926 !important;
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  margin: 11px 0 !important;
+}
+
+.vet-copy li::before {
+  color: var(--gold) !important;
+}
+
+
+/* Cardurile veterinare */
+.vet-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: start !important;
+}
+
+.vet-card {
+  padding: 8px 8px 12px !important;
+  border: 1px solid rgba(25, 25, 25, 0.1) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09) !important;
+}
+
+.vet-card img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  border-radius: 7px !important;
+}
+
+.vet-card h3 {
+  min-height: 27px !important;
+  margin: 10px 2px 0 !important;
+  color: var(--ink) !important;
+  text-align: center !important;
+  font-size: 9px !important;
+  line-height: 1.35 !important;
+}
+
+
+/* Nota de sub ofertă */
+.presentation-note {
+  grid-column: 1 / -1 !important;
+  width: min(720px, 100%) !important;
+  margin: 30px auto 0 !important;
+  padding: 18px 25px !important;
+  border: 1px solid rgba(211, 165, 95, 0.42) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.48) !important;
+  text-align: center !important;
+}
+
+.presentation-note strong {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: var(--gold) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+}
+
+.presentation-note p {
+  max-width: 620px !important;
+  margin: 0 auto !important;
+  color: #716a63 !important;
+  font-size: 11px !important;
+  line-height: 1.55 !important;
+}
+
+
+/* Numele Andreea Rica puțin mai mare */
+.brand strong {
+  font-size: 28px !important;
+}
+
+
+/* Videoclipurile verticale să încapă complet pe ecran */
+.lightbox-content {
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  padding: 26px 70px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.lightbox-content video {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 88vw !important;
+  max-height: 88vh !important;
+  max-height: 88dvh !important;
+  aspect-ratio: 9 / 16 !important;
+  object-fit: contain !important;
+  border-radius: 16px !important;
+  background: #000 !important;
+}
+
+
+/* Ajustări speciale pentru iPad */
+@media (min-width: 700px) and (max-width: 1180px) {
+  .phones {
+    max-width: 840px !important;
+    gap: 13px !important;
+  }
+
+  .phone {
+    max-width: 138px !important;
+  }
+
+  .vet-section {
+    grid-template-columns: 280px minmax(0, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  .vet-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .vet-card {
+    padding: 6px 6px 10px !important;
+  }
+
+  .vet-copy h2 {
+    font-size: 45px !important;
+  }
+}
+
+
+/* Telefon */
+@media (max-width: 699px) {
+  .phones {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .phone {
+    max-width: 165px !important;
+  }
+
+  .vet-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .vet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .lightbox-content {
+    padding: 22px 35px !important;
+  }
+}
